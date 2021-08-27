@@ -102,3 +102,4 @@ function displayFinalResults(rest, dest, trans, ent) {
 }
 
 runProgram();
+console.log(hercules);
