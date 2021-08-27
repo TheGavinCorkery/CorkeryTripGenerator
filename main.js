@@ -100,5 +100,5 @@ function displayFinalResults(rest, dest, trans, ent) {
     console.log('');
     displayResults(rest, dest, trans, ent);
 }
-
+//Finished the project before we learned what commit was and how to use Git.
 runProgram();
