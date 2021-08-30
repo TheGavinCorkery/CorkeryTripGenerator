@@ -71,23 +71,28 @@ function validateGenChoices(userRest, userDest, userTrans, userEnt) {
             allValid = true;
         }else if (userHappiness.toLowerCase() == "n") {
             let unhappiness = prompt('Which number are you not happy with? (Enter 1, 2, 3, 4, if you made a mistake enter 5)');
-            if (unhappiness == 1) {
-                userDest = generateDestination();
-                console.clear();
-            }else if (unhappiness == 2) {
-                userTrans = generateTransportation();
-                console.clear();
-            }else if (unhappiness == 3) {
-                userRest = generateRestaurant();
-                console.clear();
-            }else if (unhappiness == 4) {
-                userEnt = generateEntertainment();
-                console.clear();
-            }else if (unhappiness == 5) {
-                allValid = true;
-            }else {
-                console.log("Please enter a valid option.");
+            switch (unhappiness) {
+                case '1': 
+                    userDest = generateDestination();
+                    console.clear();
+                    break;
+                case '2':
+                    userTrans = generateTransportation();
+                    console.clear();
+                    break;
+                case '3': 
+                    userRest = generateRestaurant();
+                    console.clear();
+                    break;
+                case '4':
+                    userEnt = generateEntertainment();
+                    console.clear();
+                    break;
+                default:
+                    console.log("Please enter a valid option.");
+                    break;
             }
+            
         }
 
     }
